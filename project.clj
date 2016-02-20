@@ -60,7 +60,9 @@
   :repl-options {:init-ns lcmap.see.dev}
   :main lcmap.see.app
   :target-path "target/%s"
-  :codox {:namespaces [#"^lcmap.see\."]
+  :codox {:project {:name "LCMAP SEE Library and Services"
+                    :description "The Science and Execution Library & Services for the USGS Land Change Monitoring Assessment and Projection (LCMAP) Computation and Analysis Platform"}
+          :namespaces [#"^lcmap.see\."]
           :output-path "docs/master/current"
           :doc-paths ["docs/source"]
           :metadata {:doc/format :markdown
