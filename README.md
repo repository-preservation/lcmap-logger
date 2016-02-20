@@ -24,7 +24,9 @@ functionality necessary to support the public service.
 
 ## Documentation [&#x219F;](#contents)
 
-TBD
+The LCMAP API reference is slowly being updated with docstrings. The project's auto-generated documentation is available here:
+
+* [http://usgs-eros.github.io/lcmap.rest/current](http://usgs-eros.github.io/lcmap.rest/current/)
 
 
 ## Usage [&#x219F;](#contents)
