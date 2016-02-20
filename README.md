@@ -26,7 +26,7 @@ functionality necessary to support the public service.
 
 The LCMAP API reference is slowly being updated with docstrings. The project's auto-generated documentation is available here:
 
-* [http://usgs-eros.github.io/lcmap.rest/current](http://usgs-eros.github.io/lcmap.rest/current/)
+* [http://usgs-eros.github.io/lcmap-see/current](http://usgs-eros.github.io/lcmap-see/current/)
 
 
 ## Usage [&#x219F;](#contents)
