@@ -31,7 +31,7 @@
                  ;; being used from the local checkouts directory, we will
                  ;; uncomment the dependancy below and remove the temporary
                  ;; dependancies below.
-                 ;;[gov.usgs.eros/lcmap-client-clj "0.1.0-dev"]
+                 [gov.usgs.eros/lcmap-client-clj "0.0.1"]
                  ;; XXX note that we may still need to explicitly include the
                  ;; Apache Java HTTP client, since the version used by the LCMAP
                  ;; client is more recent than that used by Chas Emerick's
