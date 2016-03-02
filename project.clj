@@ -1,4 +1,4 @@
-(defproject gov.usgs.eros/lcmap-see "0.0.1"
+(defproject gov.usgs.eros/lcmap-see "0.0.2-SNAPSHOT"
   :description "LCMAP Science Execution Environment"
   :url "https://github.com/USGS-EROS/lcmap-see"
   :license {:name "NASA Open Source Agreement, Version 1.3"
