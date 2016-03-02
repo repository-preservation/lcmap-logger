@@ -6,11 +6,13 @@ considered a work-in-progress.
 #### Contents
 
 * [About](#about-)
+* [Documentation](#documentation-)
 * [Usage](#usage-)
 * [Structure](#structure-)
 * [Development](#development-)
 * [Deployment](#deployment-)
 * [License](#license-)
+
 
 ## About [&#x219F;](#contents)
 
