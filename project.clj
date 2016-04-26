@@ -32,6 +32,7 @@
                  ;; uncomment the dependancy below and remove the temporary
                  ;; dependancies below.
                  [gov.usgs.eros/lcmap-client-clj "0.0.1"]
+                 ;[gov.usgs.eros/lcmap-config "0.5.0-SNAPSHOT"]
                  ;; XXX note that we may still need to explicitly include the
                  ;; Apache Java HTTP client, since the version used by the LCMAP
                  ;; client is more recent than that used by Chas Emerick's
