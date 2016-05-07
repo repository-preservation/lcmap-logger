@@ -36,6 +36,10 @@ The LCMAP SEE API reference is slowly being updated with docstrings. The project
 ```
 [lcmap.see.components.db]
 hosts=localhost
+user=username
+pass=password
+job-namespace=lcmap
+job-table=jobs
 
 [lcmap.see.components.messaging]
 host=localhost
