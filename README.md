@@ -31,6 +31,18 @@ The LCMAP SEE API reference is slowly being updated with docstrings. The project
 * [http://usgs-eros.github.io/lcmap-see/current](http://usgs-eros.github.io/lcmap-see/current/)
 
 
+## Configuration [&#x219F;](#contents)
+
+```
+[lcmap.see]
+db-hosts=host1,host2,host3
+db-user=username
+db-pass=password
+job-namespace=lcmap
+job-table=jobs
+msg-host=localhost
+```
+
 ## Usage [&#x219F;](#contents)
 
 TBD
