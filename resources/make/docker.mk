@@ -28,7 +28,7 @@ docker-server-build:
 	$(BUILD_DIR)/docker \
 	$(BUILD_DIR)/checkouts/*
 	@cp -r ../lcmap-client-clj $(BUILD_DIR)/checkouts/
-	@cp -r ../lcmap-see $(BUILD_DIR)/checkouts/
+	@cp -r ../lcmap-logger $(BUILD_DIR)/checkouts/
 	@docker build -t $(DOCKERHUB_LCMAP_REST) $(CONTEXT)
 	@rm -rf $(BUILD_DIR)
 

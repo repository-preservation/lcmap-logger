@@ -1,0 +1,119 @@
+(ns ^{:doc
+  "LCMAP Unified Logging development namespace
+
+  This namespace is particularly useful when doing active development on the
+  lcmap.logger system, as it allows you to easily:
+
+   * **start** and **stop** all the system components
+   * make **filesystem changes**
+   * make **code** or **configuration changes**
+
+  and then reload with all the latest changes -- without having to restart
+  the JVM. This namespace can be leveraged to significantly improve
+  development time, especially during debugging or progotyping stages."}
+  lcmap.logger.dev
+  (:require [clojure.tools.logging :as log]
+            [clojure.tools.namespace.repl :as repl]
+            [clojure.walk :refer [macroexpand-all]]
+            [com.stuartsierra.component :as component]
+            [twig.core :as logger]
+            ;; data
+            [clojure.data.json :as json]
+            [clojurewerkz.cassaforte.client :as cc]
+            [clojurewerkz.cassaforte.cql :as cql]
+            [clojurewerkz.cassaforte.query :as query]
+            ;; data types
+            [clj-time.coerce :as time]
+            [clojure.data.codec.base64 :as b64]
+            ;; shell execution
+            [clj-commons-exec :as exec]
+            ;; other LCMAP libraries
+            [lcmap.config :as config]
+            ;; api
+            [lcmap.logger.components :as components]
+            [lcmap.logger.exceptions :as exceptions]
+            [lcmap.logger.util :as util]))
+
+(def state :stopped)
+(def system nil)
+
+(defn init []
+  (logger/set-level! ['lcmap] :info)
+  (if (util/in? [:initialized :started :running] state)
+    (log/error "System has aready been initialized.")
+    (do
+      (alter-var-root #'system
+        (constantly (components/init)))
+      (alter-var-root #'state (fn [_] :initialized))))
+  state)
+
+(defn deinit []
+  (if (util/in? [:started :running] state)
+    (log/error "System is not stopped; please stop before deinitializing.")
+    (do
+      (alter-var-root #'system (fn [_] nil))
+      (alter-var-root #'state (fn [_] :uninitialized))))
+  state)
+
+(defn start
+  ([]
+    (if (nil? system)
+      (init))
+    (if (util/in? [:started :running] state)
+      (log/error "System has already been started.")
+      (do
+        (alter-var-root #'system component/start)
+        (alter-var-root #'state (fn [_] :started))))
+    state)
+  ([component-key]
+    (alter-var-root #'system
+                    (constantly (components/start system component-key)))))
+
+(defn stop
+  ([]
+    (if (= state :stopped)
+      (log/error "System already stopped.")
+      (do
+        (alter-var-root #'system
+          (fn [s] (when s (component/stop s))))
+        (alter-var-root #'state (fn [_] :stopped))))
+    state)
+  ([component-key]
+    (alter-var-root #'system
+                    (constantly (components/stop system component-key)))))
+
+(defn restart [component-key]
+  (alter-var-root #'system
+                  (constantly (components/restart system component-key))))
+
+(defn run []
+  (if (= state :running)
+    (log/error "System is already running.")
+    (do
+      (if (not (util/in? [:initialized :started :running] state))
+        (init))
+      (if (not= state :started)
+        (start))
+      (alter-var-root #'state (fn [_] :running))))
+  state)
+
+(defn -refresh
+  ([]
+    (repl/refresh))
+  ([& args]
+    (apply #'repl/refresh args)))
+
+(defn refresh [& args]
+  "This is essentially an alias for clojure.tools.namespace.repl/refresh."
+  (if (util/in? [:started :running] state)
+    (stop))
+  (apply -refresh args))
+
+(defn reset []
+  (stop)
+  (deinit)
+  (refresh :after 'lcmap.logger.dev/run))
+
+;;; Aliases
+
+(def reload #'reset)
