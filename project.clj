@@ -84,6 +84,8 @@
                      [slamhound "1.5.5"]]
       :aliases {"slamhound" ["run" "-m" "slam.hound"]}
       :source-paths ["dev-resources/src"]
+      :plugins [[lein-kibit "0.1.2"]
+                [jonase/eastwood "0.2.3"]]
       :env
         {:active-profile "development"
          :db {:hosts ["127.0.0.1"]
