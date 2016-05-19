@@ -22,4 +22,6 @@
         local-ip  (.getHostAddress (java.net.InetAddress/getLocalHost))]
     (log/info "LCMAP Unified Logging service's local IP address:" local-ip)
     (component/start system)
-    (util/add-shutdown-handler #(component/stop system))))
+    (util/add-shutdown-handler #(component/stop system))
+    ;; Since there's no daemon, keep things running with a Thread join
+    (.join (Thread/currentThread))))
