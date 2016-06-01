@@ -3,7 +3,7 @@
   :url "https://github.com/USGS-EROS/lcmap-logger"
   :license {:name "NASA Open Source Agreement, Version 1.3"
             :url "http://ti.arc.nasa.gov/opensource/nosa/"}
-  :dependencies [[org.clojure/clojure "1.7.0"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/core.match "0.3.0-alpha4"]
                  [org.clojure/data.codec "0.1.0"]
                  [org.clojure/data.json "0.2.6"]
@@ -46,4 +46,3 @@
       :source-paths ["dev-resources/src"]
       :plugins [[lein-kibit "0.1.2"]
                 [jonase/eastwood "0.2.3"]]}})
-
