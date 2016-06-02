@@ -1,4 +1,4 @@
-(ns ^{:doc
+(ns lcmap.logger.dev
   "LCMAP Unified Logging development namespace
 
   This namespace is particularly useful when doing active development on the
@@ -10,8 +10,7 @@
 
   and then reload with all the latest changes -- without having to restart
   the JVM. This namespace can be leveraged to significantly improve
-  development time, especially during debugging or progotyping stages."}
-  lcmap.logger.dev
+  development time, especially during debugging or progotyping stages."
   (:require [clojure.tools.logging :as log]
             [clojure.tools.namespace.repl :as repl]
             [clojure.walk :refer [macroexpand-all]]
@@ -19,19 +18,12 @@
             [twig.core :as logger]
             ;; data
             [clojure.data.json :as json]
-            [clojurewerkz.cassaforte.client :as cc]
-            [clojurewerkz.cassaforte.cql :as cql]
-            [clojurewerkz.cassaforte.query :as query]
             ;; data types
-            [clj-time.coerce :as time]
             [clojure.data.codec.base64 :as b64]
-            ;; shell execution
-            [clj-commons-exec :as exec]
             ;; other LCMAP libraries
             [lcmap.config :as config]
             ;; api
             [lcmap.logger.components :as components]
-            [lcmap.logger.exceptions :as exceptions]
             [lcmap.logger.util :as util]))
 
 (def state :stopped)
