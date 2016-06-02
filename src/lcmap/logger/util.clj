@@ -7,3 +7,8 @@
   (.addShutdownHook (Runtime/getRuntime)
                     (Thread. func)))
 
+(defn in?
+  "This function returns true if the provided seqenuce contains the given
+  elment."
+  [sequence elm]
+  (some #(= elm %) sequence))
