@@ -1,4 +1,4 @@
-(ns ^{:doc
+(ns lcmap.logger.components
   "LCMAP Unified Logging components
 
   Large applications often consist of many stateful processes which must be
@@ -34,18 +34,17 @@
   For more information on the Clojure component library, logger:
 
    * https://github.com/stuartsierra/component
-   * https://www.youtube.com/watch?v=13cmHf_kt-Q"}
-  lcmap.logger.components
+   * https://www.youtube.com/watch?v=13cmHf_kt-Q"
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
             [lcmap.config.components.config :as config]
             [lcmap.logger.components.logger :as logger]
             [lcmap.logger.components.system :as system]
-            [lcmap.logger.config]))
+            [lcmap.logger.config :as logger-config]))
 
 (defn init []
   (component/system-map
-    :cfg (config/new-configuration lcmap.logger.config/defaults)
+    :cfg (config/new-configuration logger-config/defaults)
     :logger (component/using
               (logger/new-logger)
               [:cfg])
@@ -70,4 +69,3 @@
   (-> system
       (stop component-key)
       (start component-key)))
-
