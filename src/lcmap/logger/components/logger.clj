@@ -1,9 +1,8 @@
-(ns ^{:doc
+(ns lcmap.logger.components.logger
   "Logger Unified Logging system component
 
   For more information, logger the module-level code comments in
-  ``lcmap.logger.components``."}
-  lcmap.logger.components.logger
+  ``lcmap.logger.components``."
   (:require [clojure.tools.logging :as log]
             [clojure.tools.logging.impl :as log-impl]
             [com.stuartsierra.component :as component]

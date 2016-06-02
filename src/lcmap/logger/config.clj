@@ -7,6 +7,7 @@
 (def logger-schema
   {:lcmap.logging {:level schema/Str
                    :namespaces [schema/Str]}})
+
 (def cfg-schema
   (merge logger-schema
          {schema/Keyword schema/Any}))
