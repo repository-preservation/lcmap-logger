@@ -1,4 +1,7 @@
 # LCMAP Unified Logging & Log Services
+[![Build Status][travis-badge]][travis][![Dependencies Status][deps-badge]][deps][![Clojars Project][clojars-badge]][clojars]
+
+[![LCMAP open source project logo][lcmap-logo]][lcmap-logo-large]
 
 **IMPORTANT**: This project is under active development and should be
 considered a work-in-progress.
@@ -49,3 +52,18 @@ TBD
 Copyright © 2015-2016 United States Government
 
 NASA Open Source Agreement, Version 1.3
+
+
+
+<!-- Named page links below: /-->
+
+[travis]: https://travis-ci.org/USGS-EROS/lcmap-logger
+[travis-badge]: https://travis-ci.org/USGS-EROS/lcmap-logger.png?branch=master
+[deps]: http://jarkeeper.com/usgs-eros/lcmap-logger
+[deps-badge]: http://jarkeeper.com/usgs-eros/lcmap-logger/status.svg
+[lcmap-logo]: https://raw.githubusercontent.com/USGS-EROS/lcmap-system/master/resources/images/lcmap-logo-1-250px.png
+[lcmap-logo-large]: https://raw.githubusercontent.com/USGS-EROS/lcmap-system/master/resources/images/lcmap-logo-1-1000px.png
+[clojars]: https://clojars.org/gov.usgs.eros/lcmap-logger
+[clojars-badge]: https://img.shields.io/clojars/v/gov.usgs.eros/lcmap-logger.svg
+[tag-badge]: https://img.shields.io/github/tag/usgs-eros/lcmap-logger.svg?maxAge=2592000
+[tag]: https://github.com/usgs-eros/lcmap-logger/tags
