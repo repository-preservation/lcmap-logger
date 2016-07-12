@@ -41,7 +41,7 @@ project's auto-generated documentation is available here:
 
 ## Configuration [&#x219F;](#contents)
 
-```
+```ini
 [lcmap.logging]
 
 level = debug
