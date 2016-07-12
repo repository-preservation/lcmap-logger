@@ -8,22 +8,22 @@
                  [org.clojure/data.codec "0.1.0"]
                  [org.clojure/data.json "0.2.6"]
                  [org.clojure/data.xml "0.0.8"]
-                 [org.clojure/core.memoize "0.5.8"]
+                 [org.clojure/core.memoize "0.5.9"]
                  ;; Componentization
-                 [com.stuartsierra/component "0.3.0"]
+                 [com.stuartsierra/component "0.3.1"]
                  ;; Logging and Error Handling -- note that we need to explicitly pull
                  ;; in a version of slf4j so that we don't get conflict messages on the
                  ;; console
                  [clojusc/twig "0.2.1"]
-                 [dire "0.5.3"]
+                 [dire "0.5.4"]
                  [slingshot "0.12.2"]
                  [gov.usgs.eros/lcmap-client-clj "0.0.1"]
                  [gov.usgs.eros/lcmap-config "0.5.0-SNAPSHOT"]
                  ;; Dev and project metadata
-                 [leiningen-core "2.5.3"]]
+                 [leiningen-core "2.6.1"]]
   :plugins [[lein-ring "0.9.7"]
-            [lein-pprint "1.1.1"]
-            [lein-codox "0.9.1"]
+            [lein-pprint "1.1.2"]
+            [lein-codox "0.9.5"]
             [lein-simpleton "1.3.0"]]
   :repl-options {:init-ns lcmap.logger.dev}
   :main lcmap.logger.app
