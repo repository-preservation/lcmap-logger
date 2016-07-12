@@ -1,10 +1,16 @@
-# LCMAP Unified Logging & Log Services
+# lcmap.logger
+
+*LCMAP Unified Logging & Log Services*
+
+
 [![Build Status][travis-badge]][travis][![Dependencies Status][deps-badge]][deps][![Clojars Project][clojars-badge]][clojars]
 
 [![LCMAP open source project logo][lcmap-logo]][lcmap-logo-large]
 
+
 **IMPORTANT**: This project is under active development and should be
 considered a work-in-progress.
+
 
 #### Contents
 
@@ -37,6 +43,7 @@ project's auto-generated documentation is available here:
 
 ```
 [lcmap.logging]
+
 level = debug
 namespaces = lcmap.rest,lcmap.config,lcmap.event,lcmap.data,lcmap.event,lcmap.see
 ```
