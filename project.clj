@@ -28,7 +28,7 @@
   :repl-options {:init-ns lcmap.logger.dev}
   :main lcmap.logger.app
   :target-path "target/%s"
-  :codox {:project {:name "LCMAP Unified Logging & Log Services"
+  :codox {:project {:name "lcmap.logger"
                     :description "Unified Logging and Log Services for the USGS Land Change Monitoring Assessment and Projection (LCMAP) Computation and Analysis Platform"}
           :namespaces [#"^lcmap.logger\."]
           :output-path "docs/master/current"
