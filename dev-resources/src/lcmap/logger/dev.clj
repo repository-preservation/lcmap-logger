@@ -15,7 +15,7 @@
             [clojure.tools.namespace.repl :as repl]
             [clojure.walk :refer [macroexpand-all]]
             [com.stuartsierra.component :as component]
-            [twig.core :as logger]
+            [clojusc.twig :as logger]
             ;; data
             [clojure.data.json :as json]
             ;; data types

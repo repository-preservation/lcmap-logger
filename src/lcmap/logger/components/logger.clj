@@ -6,7 +6,7 @@
   (:require [clojure.tools.logging :as log]
             [clojure.tools.logging.impl :as log-impl]
             [com.stuartsierra.component :as component]
-            [twig.core :as logger]))
+            [clojusc.twig :as logger]))
 
 (defn get-log-level
   "A convenience function for use in the Logger component."
