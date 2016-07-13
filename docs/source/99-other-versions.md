@@ -1,8 +1,8 @@
 # Other Versions
 
-## LCMAP REST
+## LCMAP Logger
 
 ### API Reference
 
 * [Development](../current)
-* [0.1.0-dev](../current)
+* [0.5.0](../0.5.0)

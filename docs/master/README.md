@@ -1,4 +1,4 @@
-# lcmap-logger
+# lcmap.logger
 
 *Published Documentation for the LCMAP Unified Logging project*
 
