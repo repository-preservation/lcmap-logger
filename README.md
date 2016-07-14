@@ -36,7 +36,7 @@ functionality necessary to support the public service.
 The LCMAP Logger API reference is slowly being updated with docstrings. The
 project's auto-generated documentation is available here:
 
-* [http://usgs-eros.github.io/lcmap-logger/current](http://usgs-eros.github.io/lcmap-logger/current/)
+* [http://usgs-eros.github.io/lcmap-logger](http://usgs-eros.github.io/lcmap-logger)
 
 
 ## Configuration [&#x219F;](#contents)
