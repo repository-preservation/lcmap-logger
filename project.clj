@@ -17,8 +17,9 @@
                  [clojusc/twig "0.2.1"]
                  [dire "0.5.4"]
                  [slingshot "0.12.2"]
-                 [gov.usgs.eros/lcmap-client-clj "0.0.1"]
-                 [gov.usgs.eros/lcmap-config "0.5.0-SNAPSHOT"]
+                 ;; LCMAP Components
+                 [gov.usgs.eros/lcmap-config "0.5.0"]
+                 [gov.usgs.eros/lcmap-client-clj "0.5.0-SNAPSHOT"]
                  ;; Dev and project metadata
                  [leiningen-core "2.6.1"]]
   :plugins [[lein-ring "0.9.7"]
