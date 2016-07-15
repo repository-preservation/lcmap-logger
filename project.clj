@@ -1,4 +1,4 @@
-(defproject gov.usgs.eros/lcmap-logger "0.5.0-SNAPSHOT"
+(defproject gov.usgs.eros/lcmap-logger "0.5.0"
   :description "LCMAP Unified Logging"
   :url "https://github.com/USGS-EROS/lcmap-logger"
   :license {:name "NASA Open Source Agreement, Version 1.3"
