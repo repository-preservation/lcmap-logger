@@ -1,15 +1,10 @@
 # lcmap.logger
 
-*LCMAP Unified Logging & Log Services*
-
-
 [![Build Status][travis-badge]][travis][![Dependencies Status][deps-badge]][deps][![Clojars Project][clojars-badge]][clojars]
 
+*LCMAP Unified Logging & Log Services*
+
 [![LCMAP open source project logo][lcmap-logo]][lcmap-logo-large]
-
-
-**IMPORTANT**: This project is under active development and should be
-considered a work-in-progress.
 
 
 #### Contents
