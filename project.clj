@@ -36,6 +36,7 @@
           :metadata {:doc/format :markdown
                      :doc "Documentation forthcoming"}}
   :profiles {
+    :uberjar {:aot :all}
     ;; configuration for dev environment -- if you need to make local changes,
     ;; copy `:env { ... }` into `{:user ...}` in your ~/.lein/profiles.clj and
     ;; then override values there
