@@ -19,7 +19,6 @@
                  [slingshot "0.12.2"]
                  ;; LCMAP Components
                  [gov.usgs.eros/lcmap-config "0.5.0"]
-                 [gov.usgs.eros/lcmap-client-clj "0.5.0"]
                  ;; Dev and project metadata
                  [leiningen-core "2.6.1"]]
   :plugins [[lein-ring "0.9.7"]
