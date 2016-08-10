@@ -1,4 +1,4 @@
-(defproject gov.usgs.eros/lcmap-logger "0.5.0"
+(defproject gov.usgs.eros/lcmap-logger "1.0.0-SNAPSHOT"
   :description "LCMAP Unified Logging"
   :url "https://github.com/USGS-EROS/lcmap-logger"
   :license {:name "NASA Open Source Agreement, Version 1.3"
@@ -18,7 +18,7 @@
                  [dire "0.5.4"]
                  [slingshot "0.12.2"]
                  ;; LCMAP Components
-                 [gov.usgs.eros/lcmap-config "0.5.0"]
+                 [gov.usgs.eros/lcmap-config "1.0.0-SNAPSHOT"]
                  ;; Dev and project metadata
                  [leiningen-core "2.6.1"]]
   :plugins [[lein-ring "0.9.7"]
