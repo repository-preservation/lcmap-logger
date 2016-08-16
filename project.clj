@@ -14,7 +14,7 @@
                  ;; Logging and Error Handling -- note that we need to explicitly pull
                  ;; in a version of slf4j so that we don't get conflict messages on the
                  ;; console
-                 [clojusc/twig "0.2.1"]
+                 [clojusc/twig "0.2.2"]
                  [dire "0.5.4"]
                  [slingshot "0.12.2"]
                  ;; LCMAP Components
