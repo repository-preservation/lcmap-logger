@@ -5,7 +5,7 @@
 (def opt-spec [])
 
 (def logger-schema
-  {:lcmap.logging {:level schema/Str
+  {:lcmap.logger {:level schema/Str
                    :namespaces [schema/Str]}})
 
 (def cfg-schema

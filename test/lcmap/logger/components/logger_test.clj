@@ -4,7 +4,7 @@
 
 (def test-component
   {:cfg
-    {:lcmap.logging
+    {:lcmap.logger
       {:level "warn"
        :namespaces ["lcmap.rest", "lcmap.config", "cassaforte.*"]}}})
 

@@ -37,7 +37,7 @@ project's auto-generated documentation is available here:
 ## Configuration [&#x219F;](#contents)
 
 ```ini
-[lcmap.logging]
+[lcmap.logger]
 
 level = debug
 namespaces = lcmap.rest,lcmap.config,lcmap.event,lcmap.data,lcmap.event,lcmap.see
