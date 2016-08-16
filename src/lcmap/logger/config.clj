@@ -5,8 +5,12 @@
 (def opt-spec [])
 
 (def logger-schema
-  {:lcmap.logger {:level schema/Str
-                   :namespaces [schema/Str]}})
+  {:lcmap.logger
+    {:level schema/Str
+     :namespaces [schema/Str]
+     :msg-host schema/Str
+     :msg-port schema/Num
+     schema/Keyword schema/Str}})
 
 (def cfg-schema
   (merge logger-schema

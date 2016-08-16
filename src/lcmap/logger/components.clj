@@ -39,18 +39,24 @@
             [com.stuartsierra.component :as component]
             [lcmap.config.components.config :as config]
             [lcmap.logger.components.logger :as logger]
+            [lcmap.logger.components.messaging :as messaging]
             [lcmap.logger.components.system :as system]
             [lcmap.logger.config :as logger-config]))
 
 (defn init []
   (component/system-map
     :cfg (config/new-configuration logger-config/defaults)
+    :msging (component/using
+              (messaging/new-messaging-client)
+              [:cfg])
     :logger (component/using
               (logger/new-logger)
-              [:cfg])
+              [:cfg
+               :msging])
     :sys (component/using
            (system/new-lcmap-logger-toplevel)
            [:cfg
+            :msging
             :logger])))
 
 (defn stop [system component-key]

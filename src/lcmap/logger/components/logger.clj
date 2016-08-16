@@ -11,12 +11,12 @@
 (defn get-log-level
   "A convenience function for use in the Logger component."
   [component]
-  (keyword (get-in component [:cfg :lcmap.logging :level])))
+  (keyword (get-in component [:cfg :lcmap.logger :level])))
 
 (defn get-namespaces
   "A convenience function for use in the Logger component."
   [component]
-  (->> [:cfg :lcmap.logging :namespaces]
+  (->> [:cfg :lcmap.logger :namespaces]
        (get-in component)
        (map symbol)
        (into [])))

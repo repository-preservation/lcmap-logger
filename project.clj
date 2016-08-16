@@ -11,12 +11,12 @@
                  [org.clojure/core.memoize "0.5.9"]
                  ;; Componentization
                  [com.stuartsierra/component "0.3.1"]
-                 ;; Logging and Error Handling -- note that we need to explicitly pull
-                 ;; in a version of slf4j so that we don't get conflict messages on the
-                 ;; console
+                 ;; Logging and Error Handling
                  [clojusc/twig "0.2.2"]
                  [dire "0.5.4"]
                  [slingshot "0.12.2"]
+                 ;; Messaging
+                 [com.novemberain/langohr "3.6.1"]
                  ;; LCMAP Components
                  [gov.usgs.eros/lcmap-config "1.0.0-SNAPSHOT"]
                  ;; Dev and project metadata
