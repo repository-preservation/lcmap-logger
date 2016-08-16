@@ -3,13 +3,13 @@
             [com.stuartsierra.component :as component]
             [clojusc.twig :as logger]
             [lcmap.logger.components :as components]
-            [lcmap.logger.core :as logger-core]
+            [lcmap.logger.core :as core]
             [lcmap.logger.util :as util])
   (:gen-class))
 
 (alter-var-root
   (var log/*logger-factory*)
-  (constantly (logger-core/lcmap-logger-factory)))
+  (constantly (core/lcmap-logger-factory)))
 
 (defn -main
   "This is the entry point. Note, however, that the system components are
