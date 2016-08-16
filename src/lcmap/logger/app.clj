@@ -3,8 +3,13 @@
             [com.stuartsierra.component :as component]
             [clojusc.twig :as logger]
             [lcmap.logger.components :as components]
+            [lcmap.logger.core :as logger-core]
             [lcmap.logger.util :as util])
   (:gen-class))
+
+(alter-var-root
+  (var log/*logger-factory*)
+  (constantly (logger-core/lcmap-logger-factory)))
 
 (defn -main
   "This is the entry point. Note, however, that the system components are
@@ -19,7 +24,7 @@
   ;; the configured namespaces
   (logger/set-level! ['lcmap] :info)
   (let [system (components/init)
-        local-ip  (.getHostAddress (java.net.InetAddress/getLocalHost))]
+        local-ip (.getHostAddress (java.net.InetAddress/getLocalHost))]
     (log/info "LCMAP Unified Logging service's local IP address:" local-ip)
     (component/start system)
     (util/add-shutdown-handler #(component/stop system))
