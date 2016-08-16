@@ -12,7 +12,7 @@
                  ;; Componentization
                  [com.stuartsierra/component "0.3.1"]
                  ;; Logging and Error Handling
-                 [clojusc/twig "0.2.2"]
+                 [clojusc/twig "0.2.3"]
                  [dire "0.5.4"]
                  [slingshot "0.12.2"]
                  ;; Messaging
