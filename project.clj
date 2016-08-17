@@ -11,8 +11,10 @@
                  [org.clojure/core.memoize "0.5.9"]
                  ;; Componentization
                  [com.stuartsierra/component "0.3.1"]
-                 ;; Logging and Error Handling
+                 ;; Logging
                  [clojusc/twig "0.2.3"]
+                 [riemann "0.2.11"] ; used for logstash client
+                 ;; Error Handling
                  [dire "0.5.4"]
                  [slingshot "0.12.2"]
                  ;; Messaging
