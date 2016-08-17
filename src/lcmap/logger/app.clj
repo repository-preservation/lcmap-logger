@@ -22,7 +22,7 @@
   [& args]
   ;; Set the initial log-level before the components set the log-levels for
   ;; the configured namespaces
-  (logger/set-level! ['lcmap] :info)
+  (logger/set-level! ['lcmap] :debug)
   (let [system (components/init)
         local-ip (.getHostAddress (java.net.InetAddress/getLocalHost))]
     (log/info "LCMAP Unified Logging service's local IP address:" local-ip)
