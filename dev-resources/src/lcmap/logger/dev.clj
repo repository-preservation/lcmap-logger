@@ -15,22 +15,29 @@
             [clojure.tools.namespace.repl :as repl]
             [clojure.walk :refer [macroexpand-all]]
             [com.stuartsierra.component :as component]
-            [clojusc.twig :as logger]
+            [clojusc.twig :as twig]
             ;; data
             [clojure.data.json :as json]
             ;; data types
             [clojure.data.codec.base64 :as b64]
-            ;; other LCMAP libraries
+            ;; rabbitmq
+            [langohr.core :as langohr]
+            [langohr.channel]
+            [langohr.queue]
+            [langohr.exchange]
+            [langohr.consumers]
+            [langohr.basic]
+            ;; LCMAP libraries
             [lcmap.config :as config]
-            ;; api
             [lcmap.logger.components :as components]
+            [lcmap.logger.components.messaging :as messaging(la)]
             [lcmap.logger.util :as util]))
 
 (def state :stopped)
 (def system nil)
 
 (defn init []
-  (logger/set-level! ['lcmap] :info)
+  (twig/set-level! ['lcmap] :info)
   (if (util/in? [:initialized :started :running] state)
     (log/error "System has aready been initialized.")
     (do
