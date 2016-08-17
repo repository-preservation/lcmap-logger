@@ -13,16 +13,19 @@
                  [com.stuartsierra/component "0.3.1"]
                  ;; Logging
                  [clojusc/twig "0.2.3"]
-                 [riemann "0.2.11"] ; used for logstash client
                  ;; Error Handling
                  [dire "0.5.4"]
                  [slingshot "0.12.2"]
                  ;; Messaging
                  [com.novemberain/langohr "3.6.1"]
                  ;; LCMAP Components
-                 [gov.usgs.eros/lcmap-config "1.0.0-SNAPSHOT"]
+                 [gov.usgs.eros/lcmap-config "1.0.0-SNAPSHOT" :exclusions [
+                   org.apache.maven.wagon/wagon-provider-api
+                   org.codehaus.plexus/plexus-utils]]
                  ;; Dev and project metadata
-                 [leiningen-core "2.6.1"]]
+                 [leiningen-core "2.6.1" :exclusions [
+                   org.apache.maven.wagon/wagon-provider-api
+                   org.codehaus.plexus/plexus-utils]]]
   :plugins [[lein-ring "0.9.7"]
             [lein-pprint "1.1.2"]
             [lein-codox "0.9.5"]
@@ -47,5 +50,5 @@
                      [slamhound "1.5.5"]]
       :aliases {"slamhound" ["run" "-m" "slam.hound"]}
       :source-paths ["dev-resources/src"]
-      :plugins [[lein-kibit "0.1.2"]
+      :plugins [[lein-kibit "0.1.2"  :exclusions [org.clojure/clojure]]
                 [jonase/eastwood "0.2.3"]]}})
