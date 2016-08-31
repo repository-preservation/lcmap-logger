@@ -1,6 +1,6 @@
 # lcmap.logger
 
-[![Build Status][travis-badge]][travis][![Dependencies Status][deps-badge]][deps][![Clojars Project][clojars-badge]][clojars]
+[![Build Status][travis-badge]][travis][![Clojars Project][clojars-badge]][clojars]
 
 *LCMAP Unified Logging & Log Services*
 
