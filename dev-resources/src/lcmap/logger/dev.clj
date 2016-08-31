@@ -30,7 +30,7 @@
             ;; LCMAP libraries
             [lcmap.config :as config]
             [lcmap.logger.components :as components]
-            [lcmap.logger.components.messaging :as messaging(la)]
+            [lcmap.logger.components.messaging :as messaging]
             [lcmap.logger.util :as util]))
 
 (def state :stopped)

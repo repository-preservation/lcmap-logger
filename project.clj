@@ -1,38 +1,41 @@
 (defproject gov.usgs.eros/lcmap-logger "1.0.0-SNAPSHOT"
+  :parent-project {
+    :coords [gov.usgs.eros/lcmap-system "1.0.0-SNAPSHOT"]
+    :inherit [
+      :deploy-repositories
+      :license
+      :managed-dependencies
+      :plugins
+      :pom-addition
+      :repositories
+      ;; XXX The following can be un-commented once this issue is resolved:
+      ;;     * https://github.com/achin/lein-parent/issues/3
+      ;; [:profiles [:uberjar :dev]]
+      ]}
   :description "LCMAP Unified Logging"
   :url "https://github.com/USGS-EROS/lcmap-logger"
-  :license {:name "NASA Open Source Agreement, Version 1.3"
-            :url "http://ti.arc.nasa.gov/opensource/nosa/"}
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/core.match "0.3.0-alpha4"]
-                 [org.clojure/data.codec "0.1.0"]
-                 [org.clojure/data.json "0.2.6"]
-                 [org.clojure/data.xml "0.0.8"]
-                 [org.clojure/core.memoize "0.5.9"]
+  :dependencies [[org.clojure/clojure]
+                 [org.clojure/core.match]
+                 [org.clojure/data.codec]
+                 [org.clojure/data.json]
+                 [org.clojure/data.xml]
+                 [org.clojure/core.memoize]
                  ;; Componentization
-                 [com.stuartsierra/component "0.3.1"]
+                 [com.stuartsierra/component]
                  ;; Logging
-                 [clojusc/twig "0.2.3"]
+                 [clojusc/twig]
                  ;; Error Handling
-                 [dire "0.5.4"]
-                 [slingshot "0.12.2"]
+                 [dire]
+                 [slingshot]
                  ;; Messaging
-                 [com.novemberain/langohr "3.6.1"]
+                 [com.novemberain/langohr]
                  ;; LCMAP Components
-                 [gov.usgs.eros/lcmap-config "1.0.0-SNAPSHOT" :exclusions [
-                   org.apache.maven.wagon/wagon-provider-api
-                   org.codehaus.plexus/plexus-utils]]
+                 [gov.usgs.eros/lcmap-config]
                  ;; Dev and project metadata
-                 [leiningen-core "2.6.1" :exclusions [
-                   org.apache.maven.wagon/wagon-provider-api
-                   org.codehaus.plexus/plexus-utils]]]
-  :plugins [[lein-ring "0.9.7"]
-            [lein-pprint "1.1.2"]
-            [lein-codox "0.9.5"]
-            [lein-simpleton "1.3.0"]]
+                 [leiningen-core]]
+  :plugins [[lein-parent "0.3.0"]]
   :repl-options {:init-ns lcmap.logger.dev}
   :main lcmap.logger.app
-  :target-path "target/%s"
   :codox {:project {:name "lcmap.logger"
                     :description "Unified Logging and Log Services for the USGS Land Change Monitoring Assessment and Projection (LCMAP) Computation and Analysis Platform"}
           :namespaces [#"^lcmap.logger\."]
@@ -49,6 +52,4 @@
       :dependencies [[org.clojure/tools.namespace "0.3.0-alpha3"]
                      [slamhound "1.5.5"]]
       :aliases {"slamhound" ["run" "-m" "slam.hound"]}
-      :source-paths ["dev-resources/src"]
-      :plugins [[lein-kibit "0.1.2"  :exclusions [org.clojure/clojure]]
-                [jonase/eastwood "0.2.3"]]}})
+      :source-paths ["dev-resources/src"]}})
