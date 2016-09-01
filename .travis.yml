@@ -27,4 +27,4 @@ notifications:
   slack:
     rooms:
       - lcmap:UTqlh9PfPVomfpli10WKyZoh#cicd
-      - lcmap:UTqlh9PfPVomfpli10WKyZoh#config
+      - lcmap:UTqlh9PfPVomfpli10WKyZoh#logger
