@@ -2,7 +2,7 @@
 
 mkdir checkouts
 cd checkouts && \
-    git clone https://github.com/USGS-EROS/lcmap-client-clj.git && \
+    git clone https://github.com/USGS-EROS/lcmap-config.git && \
     cd ../
 
 mkdir ~/.usgs/
